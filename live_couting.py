@@ -11,8 +11,7 @@ def main_live(args):
     
     capture = cv2.VideoCapture(args.stream)
     num_gpus = torch.cuda.device_count()
-    device='cpu'
-    #device = 'cuda' if num_gpus >= 1 else 'cpu'
+    device = 'cuda' if num_gpus >= 1 else 'cpu'
     model=CANNet().to(device)
     model.load_state_dict(torch.load(args.weights,map_location=torch.device(device)))
     transform = transforms.Compose([
