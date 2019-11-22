@@ -1,4 +1,4 @@
-# Crowd_Couting_Live
+# Crowd Couting in Real Time!
 
 Repository created for demonstration of a Crowd Couting algorithm in real time.
 
